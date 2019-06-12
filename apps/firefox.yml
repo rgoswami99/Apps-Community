@@ -72,10 +72,10 @@
     - name: 'Setting PG ENV'
       set_fact:
         pg_env:
-          PUID: 1000
-          PGID: 1000
-          DISPLAY_WIDTH: 1600
-          DISPLAY_HEIGHT: 960
+          PUID: '1000'
+          PGID: '1000'
+          DISPLAY_WIDTH: '1600'
+          DISPLAY_HEIGHT: '960'
     
     # MAIN SCRIPT ##############################################################
 
