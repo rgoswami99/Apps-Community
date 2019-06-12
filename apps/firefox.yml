@@ -77,21 +77,12 @@
           DISPLAY_WIDTH: 1600
           DISPLAY_HEIGHT: 960
     
-    - name: 'Setting DNS Servers'
-      set_fact:
-        DNSserver:
-        
-            - 192.168.1.1
-            - 1.1.1.1
-            - 1.0.0.1
-
     # MAIN SCRIPT ##############################################################
 
     - name: 'Deploying {{pgrole}}'
       docker_container:
         name: '{{pgrole}}'
         image: '{{image}}'
-        dns: 'DNSserver'
         pull: yes
         published_ports:
           - '{{ports.stdout}}{{extport}}:{{intport}}'
